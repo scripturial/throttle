@@ -15,7 +15,7 @@ Limit calls to an API to 5 per second, or lockout for one minute
 
 ```
 use throttle_lock::Throttle;
-//!
+
 let mut counter = Throttle::new(1000, 5, 1000*60);
 if counter.is_throttled() {
     println!("Try again later")
@@ -27,7 +27,7 @@ lockout for 5 minutes.
 
 ```
 use throttle_lock::ThrottleHash;
-//!
+
 let mut counter = ThrottleHash::new(60*1000, 5, 3*60*1000);
 let email:String = "john@example.com".to_string();
 if counter.is_throttled(&email) {
