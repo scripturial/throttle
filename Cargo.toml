@@ -1,5 +1,5 @@
 [package]
-name = "throttle2"
+name = "throttle_lock"
 version = "0.1.0"
 edition = "2021"
 description = "Throttle can be used to monitor and limit user activity."
