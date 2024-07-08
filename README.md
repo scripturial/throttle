@@ -1,4 +1,4 @@
-# Throttle
+# Throttle Lock
 
 Throttle is an activity counter that can be used to monitor
 and limit activity such as incoming connections and sign in
@@ -14,7 +14,7 @@ and hardware. For demonstration purposes only.
 Limit calls to an API to 5 per second, or lockout for one minute
 
 ```
-use throttle::Throttle;
+use throttle_lock::Throttle;
 //!
 let mut counter = Throttle::new(1000, 5, 1000*60);
 if counter.is_throttled() {
@@ -26,7 +26,7 @@ Limit signin attempts on an email address to 5 per minute, or
 lockout for 5 minutes.
 
 ```
-use throttle::ThrottleHash;
+use throttle_lock::ThrottleHash;
 //!
 let mut counter = ThrottleHash::new(60*1000, 5, 3*60*1000);
 let email:String = "john@example.com".to_string();
