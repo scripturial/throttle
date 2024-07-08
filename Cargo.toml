@@ -5,6 +5,7 @@ edition = "2021"
 description = "Throttle can be used to monitor and limit user activity."
 license = "MIT"
 keywords = ["throttle"]
+readme = "README.md"
 repository = "https://github.com/scripturial/throttle"
 authors = ["Jay Rhoden <hello@scripturial.com>"]
 categories = ["algorithms"]
